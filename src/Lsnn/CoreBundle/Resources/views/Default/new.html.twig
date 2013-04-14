@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+    <h1>Add yourself</h1>
+
+    <form action="{{ path('creative_create') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <p>
+            <button type="submit">Add yourself</button>
+        </p>
+    </form>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('lsnn_core_homepage') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

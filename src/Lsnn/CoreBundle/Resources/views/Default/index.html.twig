@@ -1,1 +1,25 @@
-Hello {{ name }}!
+{% extends "::base.html.twig" %}
+
+{% block body %}
+<div class="row">
+  {% for creative in creatives %}
+    {% if loop.index is divisibleby(4) %}
+      <div class="row">
+    {% endif %} 
+    <div class="large-3 columns">
+      <a href="{{ creative.url }}">
+        <h3>{{ creative.name }}</h3>
+        <img src="{{ creative.photo }}">
+        <div class="skills">
+        {% for skill in creative.skills %}
+          <span class="round label">{{ skill.name }}</span>
+        {% endfor %}
+        </div>
+      </a>
+    </div>
+    {% if loop.index is divisibleby(4) %}
+    </div>
+    {% endif %} 
+  {% endfor %}
+</div>
+{% endblock %}

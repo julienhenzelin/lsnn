@@ -1,3 +1,11 @@
 lsnn_core_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: LsnnCoreBundle:Default:index }
+    pattern:  /
+    defaults: { _controller: LsnnCoreBundle:Creative:index }
+
+creative_create:
+    pattern:  /add-yourself
+    defaults: { _controller: LsnnCoreBundle:Default:new }
+
+about:
+    pattern:  /about
+    defaults: { _controller: LsnnCoreBundle:Default:about }

@@ -87,4 +87,15 @@ class Skill
     {
         return $this->name;
     }
+
+    /**
+     * To String
+     *
+     * @return string 
+     */
+    public function __toString()
+    {
+        return $this->name;
+    }
+
 }

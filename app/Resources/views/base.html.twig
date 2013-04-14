@@ -1,13 +1,79 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<!doctype html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Welcome!{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bmatznerfoundation/css/foundation.min.css') }}" />
+
+  <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+  <style type="text/css">
+    .lsnn-titles h2{
+      margin-bottom: -0.5em;
+      margin-top: 1em;
+    }
+    .lsnn-titles h1{
+      margin-top: 0em;
+      color: #eee;
+      font-size: 80px;
+    }
+    .lsnn-titles h1 strong{
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-bar">
+    <ul class="title-area">
+      <!-- Title Area -->
+      <li class="name">
+        <h1><a href="{{ path('lsnn_core_homepage') }}">L&nbsp;&nbsp;s&nbsp;nn&nbsp;.ch</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="divider"></li>
+        <li><a href="{{ path('lsnn_core_homepage') }}">Everybody</a></li>
+        <li class="divider"></li>
+        <li><a href="{{ path('about') }}">About</a></li>
+        <li class="divider"></li>
+        <li class="has-form">
+          <a href="{{ path('creative_create') }}" class="button">Add yourself</a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+
+  <header>
+    <div class="row">
+      <div class="large-12 columns">
+        <hgroup class="lsnn-titles">
+          <h2 class="subheader">We are</h2>
+          <h1><strong>L</strong>au<strong>s</strong>a<strong>n</strong><strong>n</strong>e<strong>.ch</strong></h1>
+          <hr>
+        </hgroup>
+      </div>
+    </div>
+  </header>
+
+  <section>
+  </section>
+  {% block body %}
+    <div class="row">
+      <div class="large-12 columns">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  {% endblock %}
+  {% block javascripts %}{% endblock %}
+  <script type="text/javascript" src="{{ asset('bundles/bmatznerzepto/js/zepto.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/bmatznerfoundation/js/foundation.min.js') }}"></script>
+  <script>
+  $(document).foundation();
+  </script>
+</body>
 </html>
