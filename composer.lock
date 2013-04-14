@@ -3,8 +3,96 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "03dc72954cb8c3a194fc95c175d986ae",
+    "hash": "994b47cdf9d92b6e42a48a4cc285a0d6",
     "packages": [
+        {
+            "name": "bmatzner/foundation-bundle",
+            "version": "4.0.4",
+            "target-dir": "Bmatzner/FoundationBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bmatzner/BmatznerFoundationBundle.git",
+                "reference": "4.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bmatzner/BmatznerFoundationBundle/zipball/4.0.4",
+                "reference": "4.0.4",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": ">=2.1"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Bmatzner\\FoundationBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernd Matzner",
+                    "email": "bernd@matznermatzner.de",
+                    "homepage": "http://berndmatzner.de"
+                }
+            ],
+            "description": "ZURB Foundation Bundle for Symfony2",
+            "homepage": "http://foundation.zurb.com/",
+            "keywords": [
+                "javascript",
+                "responsive",
+                "symfony"
+            ],
+            "time": "2013-03-06 14:06:30"
+        },
+        {
+            "name": "bmatzner/zepto-bundle",
+            "version": "1.0",
+            "target-dir": "Bmatzner/ZeptoBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bmatzner/BmatznerZeptoBundle.git",
+                "reference": "1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bmatzner/BmatznerZeptoBundle/zipball/1.0",
+                "reference": "1.0",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": ">=2.1"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Bmatzner\\ZeptoBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernd Matzner",
+                    "email": "bernd@matznermatzner.de",
+                    "homepage": "http://berndmatzner.de"
+                }
+            ],
+            "description": "Zepto.js Bundle for Symfony2",
+            "homepage": "http://zeptojs.com/",
+            "keywords": [
+                "javascript",
+                "symfony",
+                "zepto"
+            ],
+            "time": "2013-03-12 19:18:48"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.1",
