@@ -1,11 +1,16 @@
-lsnn_core_homepage:
-    pattern:  /
-    defaults: { _controller: LsnnCoreBundle:Creative:index }
+Default:
+    resource: "@LsnnCoreBundle/Controller/DefaultController.php"
+    type:     annotation
+    prefix:   /
+    
+# lsnn_core_homepage:
+#     pattern:  /
+#     defaults: { _controller: LsnnCoreBundle:Creative:index }
 
-creative_create:
-    pattern:  /add-yourself
-    defaults: { _controller: LsnnCoreBundle:Default:new }
+# creative_create:
+#     pattern:  /add-yourself
+#     defaults: { _controller: LsnnCoreBundle:Default:new }
 
-about:
-    pattern:  /about
-    defaults: { _controller: LsnnCoreBundle:Default:about }
+# about:
+#     pattern:  /about
+#     defaults: { _controller: LsnnCoreBundle:Default:about }

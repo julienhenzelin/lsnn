@@ -13,7 +13,7 @@ use Lsnn\CoreBundle\Form\CreativeType;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="lsnn_core_homepage")
      * @Template()
      */
     public function indexAction(Request $request)
@@ -33,8 +33,7 @@ class DefaultController extends Controller
 
     /**
      * Displays a form to create a new Creative entity.
-     *
-     * @Method("GET")
+     * @Route("/add-yourself", name="creative_create")
      * @Template()
      */
     public function newAction(Request $request)
@@ -54,11 +53,6 @@ class DefaultController extends Controller
                 return $this->redirect($this->generateUrl('lsnn_core_homepage', array('id' => $entity->getId())));
             }
 
-            return array(
-                'entity' => $entity,
-                'form'   => $form->createView(),
-            );
-
          } 
 
         return array(
@@ -70,6 +64,7 @@ class DefaultController extends Controller
     /**
      * Displays About page
      *
+     * @Route("/about", name="about")
      * @Template()
      */
     public function aboutAction(Request $request)
