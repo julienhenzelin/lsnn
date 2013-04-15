@@ -30,4 +30,4 @@ role :db,         domain, :primary => true       # This is where Symfony2 migrat
 set  :keep_releases,  3
 
 # Be more verbose by uncommenting the following line
-logger.level = Logger::MAX_LEVEL
+# logger.level = Logger::MAX_LEVEL
