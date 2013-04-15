@@ -145,7 +145,7 @@ class Creative
     public function getPhoto()
     {
         // return $this->photo;
-        return "http://www.gravatar.com/avatar/".md5( strtolower( trim( $this->email )));
+        return "http://www.gravatar.com/avatar/".md5( strtolower( trim( $this->email )))."?s=400";
     }
 
     /**

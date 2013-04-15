@@ -6,16 +6,22 @@
     {% if loop.index is divisibleby(4) %}
       <div class="row">
     {% endif %} 
-    <div class="large-3 columns">
-      <a href="{{ creative.url }}">
-        <h3>{{ creative.name }}</h3>
-        <img src="{{ creative.photo }}">
-        <div class="skills">
-        {% for skill in creative.skills %}
-          <span class="round label">{{ skill.name }}</span>
-        {% endfor %}
-        </div>
-      </a>
+    <div class="span3">
+      <div class="creative">
+        <a href="{{ creative.url }}">
+          <div class="profile">
+            <img src="{{ creative.photo }}" class="img-rounded" width="100%">
+          </div>
+          <div class="infos">
+            <h3>{{ creative.name }}</h3>
+            <div class="skills">
+            {% for skill in creative.skills %}
+              <span class="round label">{{ skill.name }}</span>
+            {% endfor %}
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
     {% if loop.index is divisibleby(4) %}
     </div>
