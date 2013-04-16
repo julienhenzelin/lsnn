@@ -28,6 +28,12 @@ class LoadSkillData extends AbstractFixture implements OrderedFixtureInterface
         $skill->setSlug('developer');
         $this->addReference('skill.developer', $skill);
         $manager->persist($skill);
+        
+        $skill = new Skill();
+        $skill->setName('UX Designer');
+        $skill->setSlug('ux');
+        $this->addReference('skill.ux', $skill);
+        $manager->persist($skill);        
 
         $skill = new Skill();
         $skill->setName('Photographer');
