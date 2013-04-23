@@ -4,13 +4,13 @@
 <div class="row">
   {% for creative in creatives %}
     {% if loop.index is divisibleby(4) %}
-      <div class="row">
+      <div class="row creatives">
     {% endif %} 
     <div class="span3">
       <div class="creative">
         <a href="{{ creative.url }}">
           <div class="profile">
-            <img src="{{ creative.photo }}" class="img-rounded" width="100%">
+            <img src="{{ creative.photo }}" width="100%">
           </div>
           <div class="infos">
             <h3>{{ creative.name }}</h3>

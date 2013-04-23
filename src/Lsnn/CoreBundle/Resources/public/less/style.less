@@ -65,7 +65,7 @@
 // Lsnn
 .lsnn-titles{
   h1{
-    color: lighten(@blueDark, 20%);
+    color: @grayLight;
     strong{
       color: @green;
     }
@@ -73,6 +73,9 @@
       font-style: normal;
     }
   }
+}
+.creatives{
+  margin-bottom: 1em;
 }
 .creative{
   position: relative;
@@ -102,3 +105,5 @@
 
 // Utility classes
 @import "../../../../../../vendor/twitter/bootstrap/less/utilities.less"; // Has to be last to override when necessary
+
+@import "responsive.less"; 

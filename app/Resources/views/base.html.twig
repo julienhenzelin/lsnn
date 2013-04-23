@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}Welcome!{% endblock %}</title>
+  <title>{% block title %}Lssn.ch – Bienvenue !{% endblock %}</title>
   
   {% stylesheets
      '@LsnnCoreBundle/Resources/public/less/style.less'
@@ -28,10 +28,10 @@
         <a class="brand" href="{{ path('lsnn_core_homepage') }}">L&nbsp;&nbsp;s&nbsp;nn&nbsp;.ch</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
-              <li><a href="{{ path('lsnn_core_homepage') }}">Everybody</a></li>
-              <li><a href="{{ path('about') }}">About</a></li>
+              <li><a href="{{ path('lsnn_core_homepage') }}">Tout Lsnn</a></li>
+              <li><a href="{{ path('about') }}">A propos</a></li>
               <li class="pull-right">
-                <a href="{{ path('creative_create') }}">Add yourself</a>
+                <a href="{{ path('creative_create') }}">S'ajouter</a>
               </li>
           </ul>
         </div>
@@ -42,9 +42,12 @@
   <header class="container" style="margin-top:80px;margin-bottom:20px">
     <div class="row">
       <div class="span12">
-        <hgroup class="lsnn-titles">
-          <h1><em>We are</em> <strong>L</strong>au<strong>s</strong>a<strong>n</strong><strong>n</strong>e<strong>.ch</strong></h1>
-        </hgroup>
+        <div class="well">
+          <div class="lsnn-titles">
+            <h1><strong>L</strong>au<strong>s</strong>a<strong>n</strong><strong>n</strong>e<strong>.ch</strong></h1>
+          </div>
+          <p>Ce site regroupe les</p>
+        </div>
       </div>
     </div>
   </header>
@@ -58,6 +61,10 @@
     </div>
   {% endblock %}
   </section>
-  {% block javascripts %}{% endblock %}
+  {% block javascripts %}
+  {% javascripts '@jquery_js' '@bootstrap_js' filter='?yui_js' combine=true %}
+     <script src="{{ asset_url }}"></script>
+  {% endjavascripts %}
+  {% endblock %}
 </body>
 </html>
