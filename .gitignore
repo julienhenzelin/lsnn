@@ -14,3 +14,4 @@ app/config/parameters.yml
 
 .DS_Store
 /data/
+/web/css/
