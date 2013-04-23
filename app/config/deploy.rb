@@ -20,6 +20,9 @@ set :shared_children,     [app_path + "/logs", "web/uploads", "data"]
 # share our database configuration
 set :shared_files,      ["app/config/parameters.yml"]
 
+set :update_assets_version, false
+set :dump_assetic_assets, true
+
 set :model_manager, "doctrine"
 # Or: `propel`
 
