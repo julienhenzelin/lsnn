@@ -1,9 +1,9 @@
-set :application, "set your application name here"
-set :domain,      "antistatique.alwaysdata.net"
+set :application, "Lsnn"
+set :domain,      "antistatique"
 set :deploy_to,   "/home/mfh/www/lsnn.ch/"
 set :app_path,    "app"
 
-set :user,        "mfh" # CHANGE ME
+set :user,        "mfh"
 set :use_sudo,    false
 
 set :repository,  "git@github.com:zufrieden/lsnn.git"
@@ -27,8 +27,8 @@ set :model_manager, "doctrine"
 # Or: `propel`
 
 role :web,        domain                         # Your HTTP server, Apache/etc
-role :app,        domain                         # This may be the same as your `Web` server
-role :db,         domain, :primary => true       # This is where Symfony2 migrations will run
+role :app,        domain, :primary => true       # This may be the same as your `Web` server
+role :db,        domain, :primary => true
 
 set  :keep_releases,  3
 
