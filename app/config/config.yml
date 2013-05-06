@@ -74,9 +74,6 @@ liip_imagine:
             filters:
                 thumbnail: { size: [400, 400], mode: outbound }
 
-web_profiler:
-    intercept_redirects: false
-
 # Uploader VICH
 knp_gaufrette:
     adapters:
