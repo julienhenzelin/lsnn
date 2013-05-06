@@ -13,7 +13,7 @@ class CreativeType extends AbstractType
         $builder
             ->add('name')
             ->add('email')
-            ->add('photo')
+            ->add('image')
             ->add('url')
             ->add('skills')
         ;

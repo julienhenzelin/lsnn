@@ -4,10 +4,14 @@ namespace Lsnn\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Lsnn\CoreBundle\Entity\Skill as Skill;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="creative")
+ * @Vich\Uploadable
  */
 class Creative
 {
@@ -31,6 +35,18 @@ class Creative
      * @ORM\Column(name="email", type="string", length=255)
      */
     protected $email;
+
+    /**
+     * @Assert\File(
+     *     maxSize="2M",
+     *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg"}
+     * )
+     * @Vich\UploadableField(mapping="creative_image", fileNameProperty="photo")
+     *
+     * @var File $image
+     */
+    protected $image;
+
 
     /**
      * @var text $photo
@@ -144,8 +160,31 @@ class Creative
      */
     public function getPhoto()
     {
-        // return $this->photo;
-        return "http://www.gravatar.com/avatar/".md5( strtolower( trim( $this->email )))."?s=400";
+        return $this->photo;
+        // return "http://www.gravatar.com/avatar/".md5( strtolower( trim( $this->email )))."?s=400";
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     * @return Creative
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string 
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 
     /**

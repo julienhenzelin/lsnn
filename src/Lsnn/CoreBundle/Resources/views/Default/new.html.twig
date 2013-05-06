@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block content %}
-    <h1>Add yourself</h1>
+    <h1>S'ajouter</h1>
     <div class="well">
         <form action="{{ path('creative_create') }}" method="post" {{ form_enctype(form) }}>
             {{ form_widget(form) }}
@@ -14,7 +14,7 @@
         <ul class="record_actions">
     <li>
         <a href="{{ path('lsnn_core_homepage') }}">
-            Back to the list
+            Retour à la liste
         </a>
     </li>
 </ul>

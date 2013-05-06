@@ -21,8 +21,10 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Lsnn\CoreBundle\LsnnCoreBundle(),
-            new Bc\Bundle\BootstrapBundle\BcBootstrapBundle()
-
+            new Bc\Bundle\BootstrapBundle\BcBootstrapBundle(),
+            new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

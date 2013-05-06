@@ -67,6 +67,33 @@ assetic:
 bc_bootstrap:
     less_filter: lessphp
 
+liip_imagine:
+    filter_sets:
+        cover:
+            quality: 100
+            filters:
+                thumbnail: { size: [400, 400], mode: outbound }
+
+web_profiler:
+    intercept_redirects: false
+
+# Uploader VICH
+knp_gaufrette:
+    adapters:
+        creative_adapter:
+            local:
+                directory: %kernel.root_dir%/../web/images/creatives
+    filesystems:
+        creative_image_fs:
+            adapter:    creative_adapter
+
+vich_uploader:
+    db_driver: orm # or mongodb
+    mappings:
+        creative_image:
+            uri_prefix: /images/creative
+            upload_destination: %kernel.root_dir%/../web/images/creative
+
 # Doctrine Configuration
 doctrine:
     dbal:

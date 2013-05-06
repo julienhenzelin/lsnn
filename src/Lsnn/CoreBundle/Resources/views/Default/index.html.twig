@@ -10,7 +10,8 @@
       <div class="creative">
         <a href="{{ creative.url }}">
           <div class="profile">
-            <img src="{{ creative.photo }}" width="100%">
+            {# <img src="{{ creative.photo }}" width="100%"> #}
+            <img src="{{ vich_uploader_asset(creative, 'image') | imagine_filter('cover') }}" alt="{{ creative.name }}" width="100%"/>
           </div>
           <div class="infos">
             <h3>{{ creative.name }}</h3>
