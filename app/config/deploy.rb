@@ -15,7 +15,7 @@ set :app_config_file,       "parameters.yml"
 
 
 # directories that will be shared between all deployments
-set :shared_children,     [app_path + "/logs", "web/uploads", "data"]
+set :shared_children,     [app_path + "/logs", "web/images", "web/uploads", "data"]
 
 # share our database configuration
 set :shared_files,      ["app/config/parameters.yml"]
@@ -33,4 +33,4 @@ role :db,        domain, :primary => true
 set  :keep_releases,  3
 
 # Be more verbose by uncommenting the following line
-# logger.level = Logger::MAX_LEVEL
+logger.level = Logger::MAX_LEVEL
