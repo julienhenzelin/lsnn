@@ -18,13 +18,12 @@ class LoadCreativeData extends AbstractFixture implements OrderedFixtureInterfac
 
 
         $creative = new Creative();
-        $creative->setName('Marc Friederich');
-        $creative->setEmail('marc@antistatique.net');
+        $creative->setName('Julien Henzelin');
+        $creative->setEmail('julienhenzelin@epsn.ch');
         // use gravatar service for now ...
-        $creative->setPhoto("http://www.gravatar.com/avatar/".md5( strtolower( trim( "marc@antistatique.net"))));
-        $creative->setUrl('http://www.antistatique.net');
-        $creative->addSkill($manager->merge($this->getReference('skill.developer')));
-        $creative->addSkill($manager->merge($this->getReference('skill.designer')));
+        $creative->setPhoto("http://www.gravatar.com/avatar/".md5( strtolower( trim( "julien.henzelin@liquid-concept.ch"))));
+        $creative->setUrl('http://www.epsn.ch');
+        $creative->addSkill($manager->merge($this->getReference('skill.naturopathe_epsn')));
         $manager->persist($creative);
 
         $manager->flush();

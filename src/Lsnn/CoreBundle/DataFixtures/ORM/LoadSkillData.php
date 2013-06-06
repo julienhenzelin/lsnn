@@ -18,71 +18,40 @@ class LoadSkillData extends AbstractFixture implements OrderedFixtureInterface
 
 
         $skill = new Skill();
-        $skill->setName('Designer');
-        $skill->setSlug('designer');
-        $this->addReference('skill.designer', $skill);
+        $skill->setName('Naturopathe');
+        $skill->setSlug('naturopathe');
+        $this->addReference('skill.naturopathe', $skill);
         $manager->persist($skill);
 
         $skill = new Skill();
-        $skill->setName('Developer');
-        $skill->setSlug('developer');
-        $this->addReference('skill.developer', $skill);
+        $skill->setName('Naturopathe EPSN');
+        $skill->setSlug('naturopathe-epsn');
+        $this->addReference('naturopathe-epsn', $skill);
         $manager->persist($skill);
         
         $skill = new Skill();
-        $skill->setName('UX Designer');
-        $skill->setSlug('ux');
-        $this->addReference('skill.ux', $skill);
+        $skill->setName('ASCA');
+        $skill->setSlug('asca');
+        $this->addReference('skill.asca', $skill);
         $manager->persist($skill);        
 
         $skill = new Skill();
-        $skill->setName('Photographer');
-        $skill->setSlug('photographer');
-        $this->addReference('skill.photographer', $skill);
+        $skill->setName('RME');
+        $skill->setSlug('rme');
+        $this->addReference('skill.rme', $skill);
         $manager->persist($skill);
 
         $skill = new Skill();
-        $skill->setName('Illustrator');
-        $skill->setSlug('illustrator');
-        $this->addReference('skill.illustrator', $skill);
+        $skill->setName('NVS');
+        $skill->setSlug('nvs');
+        $this->addReference('skill.nvs', $skill);
         $manager->persist($skill);
 
         $skill = new Skill();
-        $skill->setName('Musician');
-        $skill->setSlug('musician');
-        $this->addReference('skill.musician', $skill);
+        $skill->setName('APTN');
+        $skill->setSlug('aptn');
+        $this->addReference('skill.aptn', $skill);
         $manager->persist($skill);
-
-        $skill = new Skill();
-        $skill->setName('Writer');
-        $skill->setSlug('writer');
-        $this->addReference('skill.writer', $skill);
-        $manager->persist($skill);
-
-        $skill = new Skill();
-        $skill->setName('Filmmaker');
-        $skill->setSlug('filmmaker');
-        $this->addReference('skill.filmmaker', $skill);
-        $manager->persist($skill);
-
-        $skill = new Skill();
-        $skill->setName('Crafter');
-        $skill->setSlug('crafter');
-        $this->addReference('skill.crafter', $skill);
-        $manager->persist($skill);
-
-        $skill = new Skill();
-        $skill->setName('Cook');
-        $skill->setSlug('cook');
-        $this->addReference('skill.cook', $skill);
-        $manager->persist($skill);
-
-        $skill = new Skill();
-        $skill->setName('Mographer');
-        $skill->setSlug('mographer');
-        $this->addReference('skill.mographer', $skill);
-        $manager->persist($skill);
-
 
         $manager->flush();
     }
