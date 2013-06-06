@@ -1,8 +1,8 @@
-lsnn
-====
+Naturoromandie
+==============
 
-lsnn.ch – City/Region creative people directory 
-A Symfony2 project.
+naturoromandie.ch – Naturopatie related people directory 
+A Symfony2 project. base on github.com/zufrieden/lsnn
 
 How to install
 ==============
