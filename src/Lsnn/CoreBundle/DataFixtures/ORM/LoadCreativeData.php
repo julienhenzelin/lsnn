@@ -23,7 +23,7 @@ class LoadCreativeData extends AbstractFixture implements OrderedFixtureInterfac
         // use gravatar service for now ...
         $creative->setPhoto("http://www.gravatar.com/avatar/".md5( strtolower( trim( "julien.henzelin@liquid-concept.ch"))));
         $creative->setUrl('http://www.epsn.ch');
-        $creative->addSkill($manager->merge($this->getReference('skill.naturopathe_epsn')));
+        $creative->addSkill($manager->merge($this->getReference('skill.naturopathe-epsn')));
         $manager->persist($creative);
 
         $manager->flush();

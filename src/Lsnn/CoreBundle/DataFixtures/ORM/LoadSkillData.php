@@ -26,14 +26,14 @@ class LoadSkillData extends AbstractFixture implements OrderedFixtureInterface
         $skill = new Skill();
         $skill->setName('Naturopathe EPSN');
         $skill->setSlug('naturopathe-epsn');
-        $this->addReference('naturopathe-epsn', $skill);
+        $this->addReference('skill.naturopathe-epsn', $skill);
         $manager->persist($skill);
         
         $skill = new Skill();
         $skill->setName('ASCA');
         $skill->setSlug('asca');
         $this->addReference('skill.asca', $skill);
-        $manager->persist($skill);        
+        $manager->persist($skill);
 
         $skill = new Skill();
         $skill->setName('RME');

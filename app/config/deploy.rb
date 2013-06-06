@@ -1,12 +1,12 @@
 set :application, "Lsnn"
 set :domain,      "antistatique"
-set :deploy_to,   "/home/mfh/www/lsnn.ch/"
+set :deploy_to,   "/home/mfh/www/naturoromandie.ch/"
 set :app_path,    "app"
 
 set :user,        "mfh"
 set :use_sudo,    false
 
-set :repository,  "git@github.com:zufrieden/lsnn.git"
+set :repository,  "git@github.com:julienhenzelin/naturoromandie.git"
 set :scm,         :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `subversion`, `mercurial`, `perforce`, or `none`
 
