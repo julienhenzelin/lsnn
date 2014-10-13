@@ -11,7 +11,9 @@ class CreativeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
+            ->add('name','text', array(
+                    'label'  => 'Prénom Nom',
+                ))
             ->add('email')
             ->add('image')
             ->add('url')
